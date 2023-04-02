@@ -1,5 +1,5 @@
 # Hardhat Test Action
-Simple wrapper of hardhat test to GitHub Action
+Simple wrapper of hardhat test for GitHub Action
 
 ## Introduction
 This action aims to run on top of hardhat project, make sure you're using hardhat in your project\

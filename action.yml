@@ -1,5 +1,5 @@
-name: 'Hardhat test'
-description: 'Simple wrapper for hardhat test'
+name: 'Hardhat Test'
+description: 'Simple wrapper of hardhat test for GitHub Action'
 author: 'ambersun1234'
 inputs:
   network:
@@ -16,3 +16,7 @@ inputs:
 runs:
   using: 'node16'
   main: 'dist/main.js'
+
+branding:
+  icon: box
+  color: yellow
