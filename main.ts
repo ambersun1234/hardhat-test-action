@@ -2,6 +2,7 @@ import * as core from "@actions/core";
 import * as cli from "@actions/exec";
 import * as fs from "fs";
 import * as path from "path";
+import { ethers } from "ethers";
 
 const packageManagerFileMap = new Map<string, string>([
   ["yarn", "yarn.lock"],
@@ -21,7 +22,8 @@ const fileExists = (lockFileName: string): boolean => {
 
 const main = async () => {
   const network = core.getInput("network");
-  const privateKey = core.getInput("private_key");
+  const privateKey =
+    core.getInput("private_key") || ethers.Wallet.createRandom().privateKey.slice(2);
   const rpcUrl = core.getInput("rpc_url");
   const networkArgs = ["--network", network];
 
