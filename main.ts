@@ -42,7 +42,7 @@ const main = async () => {
 
   for (let [packageManager, file] of packageManagerFileMap) {
     if (fileExists(file)) {
-      await cli.exec(packageManagerCommandMap[packageManager]);
+      await cli.exec(packageManagerCommandMap.get(packageManager));
     }
   }
 

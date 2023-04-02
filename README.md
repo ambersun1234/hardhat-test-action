@@ -62,7 +62,7 @@ These environment variable needs to be consistent with data in
 ## Build
 ```
 $ yarn install
-$ yarn tsc
+$ yarn webpack
 ```
 
 ## License
