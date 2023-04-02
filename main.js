@@ -27,10 +27,22 @@ const fileExists = (lockFileName) => {
 };
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const network = core.getInput("network");
+    const privateKey = core.getInput("private_key");
+    const rpcUrl = core.getInput("rpc_url");
     const networkArgs = ["--network", network];
-    if (network !== localNetwork && process.env.INPUT_PRIVATE_KEY != "") {
-        core.setFailed("Private key not found");
+    if (network !== localNetwork) {
+        if (privateKey !== "") {
+            core.setFailed("Private key not found");
+        }
+        if (rpcUrl !== "") {
+            core.setFailed("RPC url not found");
+        }
     }
+    const content = `
+    PRIVATE_KEY=${privateKey}\
+    ${network.toUpperCase()}_RPC_URL=${rpcUrl}\
+  `;
+    fs.writeFileSync(path.join(process.cwd(), ".env"), content, { flag: "w" });
     for (let [packageManager, file] of packageManagerFileMap) {
         if (fileExists(file)) {
             yield cli.exec(packageManagerCommandMap[packageManager]);

@@ -9,6 +9,9 @@ inputs:
   private_key:
    description: 'Testnet account'
    required: false
+  rpc_url:
+    description: 'RPC node url'
+    required: false
 
 runs:
   using: 'node16'
