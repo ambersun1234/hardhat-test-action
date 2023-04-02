@@ -1,0 +1,15 @@
+name: 'Hardhat test'
+description: 'Simple wrapper for hardhat test'
+author: 'ambersun1234'
+inputs:
+  network:
+   description: 'Blockchain network'
+   required: true
+   default: 'hardhat'
+  private_key:
+   description: 'Testnet account'
+   required: false
+
+runs:
+  using: 'node16'
+  main: 'dist/main.js'
