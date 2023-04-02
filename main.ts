@@ -37,8 +37,8 @@ const main = async () => {
   }
 
   const content = `
-    PRIVATE_KEY=${privateKey}\
-    ${network.toUpperCase()}_RPC_URL=${rpcUrl}\
+    PRIVATE_KEY=${privateKey}
+    ${network.toUpperCase()}_RPC_URL=${rpcUrl}
   `;
   fs.writeFileSync(path.join(process.cwd(), ".env"), content, { flag: "w" });
 
