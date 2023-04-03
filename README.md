@@ -43,8 +43,8 @@ jobs:
       uses: ambersun1234/hardhat-test-action@v1
       with:
         network: goerli
-        private_key: ${{ secrets.private_key }}
-        rpc_url: ${{ secrets.rpc_url }}
+        private_key: ${{ secrets.PRIVATE_KEY }}
+        rpc_url: ${{ secrets.RPC_URL }}
 ```
 
 ## Note
