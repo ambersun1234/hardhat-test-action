@@ -58,6 +58,8 @@ These environment variable needs to be consistent with data in
 + `hardhat.config.ts`
 + `.env`
 
+## Example
+You can find a complete example of how to use this action at [github.com/ambersun1234/nft](https://github.com/ambersun1234/nft)
 
 ## Build
 ```
