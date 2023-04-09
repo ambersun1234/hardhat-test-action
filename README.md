@@ -10,10 +10,11 @@ One thing to note is that when you choose to run with testnet, since we're actua
 ## How to use
 Create a workflow file under `.github/workflows`, and name it as for example `test.yaml` and fill with following content
 ```yaml
+name: unit-test
 on: [push]
 
 jobs:
-    test:
+  test:
     runs-on: ubuntu-latest
     name: Hardhat unit test
     steps:
@@ -28,10 +29,11 @@ jobs:
 ```
 or
 ```yaml
+name: unit-test
 on: [push]
 
 jobs:
-    test:
+  test:
     runs-on: ubuntu-latest
     name: Hardhat unit test
     steps:
