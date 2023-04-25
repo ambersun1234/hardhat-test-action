@@ -34,11 +34,13 @@ const main = async () => {
     const networkArgs = ["--network", network];
 
     if (network !== localNetwork) {
-        if (privateKey !== "") {
+        if (privateKey === "") {
             core.setFailed("Private key not found");
+            return;
         }
-        if (rpcUrl !== "") {
+        if (rpcUrl === "") {
             core.setFailed("RPC url not found");
+            return;
         }
     }
 

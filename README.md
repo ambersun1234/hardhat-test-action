@@ -49,6 +49,18 @@ jobs:
         rpc_url: ${{ secrets.RPC_URL }}
 ```
 
+## Secrets
+In order for this action to work properly, you may need to specify `repository secrets`
+
+1. `PRIVATE_KEY`
+    + Your private key without `0x`
+2. `RPC_URL`
+    + RPC url endpoint, e.g. `https://eth-sepolia.g.alchemy.com/v2/xxxxxxxxxxxxxx`
+
+Note that secrets are `case sensitive`, be sure to create secrets with all upper case
+
+> You can find more information on [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+
 ## Note
 To align environment variable with your hardhat project,\
 please check your variable declaration match the following convention or not\
